@@ -3,14 +3,28 @@ use std::io::BufRead;
 use rsmaxsat::solver::MaxSATSolver;
 use std::collections::VecDeque;
 
+#[derive(Debug,Clone)]
+pub enum Color {
+    RED, // is in the dominating set
+    WHITE, // is dominated already 
+    BLUE // must be dominated. default state.
+}
+
 #[derive(Default,Debug)]
 pub struct Graph {
     pub ngbh: HashMap<usize, Vec<usize>>,
+    pub color: HashMap<usize, Color>,
+}
+
+pub struct TreeDec {
+    pub bags: HashMap<usize, Vec<usize>>,
+    pub tree_ngbh: HashMap<usize, Vec<usize>>,
 }
 
 impl Graph {
     fn add_node(&mut self, u: usize) {
         self.ngbh.entry(u).or_insert_with(Vec::new);
+        self.color.entry(u).or_insert(Color::BLUE);
     }
 
     fn add_edge(&mut self, u: usize, v: usize) {
@@ -18,7 +32,7 @@ impl Graph {
         self.ngbh.entry(v).or_insert_with(Vec::new).push(u);
     }
 
-    fn nnodes(&self) -> usize {
+    pub fn nnodes(&self) -> usize {
         return self.ngbh.len();
     }
 
@@ -29,15 +43,48 @@ impl Graph {
             .map(|(&key, vec)| (key, vec.len()))
     }
 
+    fn find_max_degree_vertex(&self) -> Option<(usize,usize)> {
+        self.ngbh
+            .iter()
+            .max_by_key(|(_, vec)| vec.len())
+            .map(|(&key, vec)| (key, vec.len()))
+    }
+
     fn delete_node(&mut self, node_to_delete: usize) {
-        self.ngbh.remove_entry(&node_to_delete);
-        for vec in self.ngbh.values_mut() {
+        for neighbor in self.neighborhood(node_to_delete) {
+            let vec = self.ngbh.get_mut(&neighbor).unwrap();
             vec.retain(|&x| x != node_to_delete);
         }
+        self.ngbh.remove_entry(&node_to_delete);
     }
 
     fn neighborhood(&self, u: usize) -> Vec<usize> {
         self.ngbh.get(&u).unwrap().to_vec()
+    }
+    
+    pub fn degree(&self, u: usize) -> usize {
+        self.neighborhood(u).len()
+    }
+
+    pub fn degree1_rule(&mut self, u: usize) {
+        let v = self.ngbh.get(&u).unwrap().to_vec().pop().unwrap();
+        self.color.insert(v, Color::RED);
+        self.delete_node(u);
+        for w in self.neighborhood(v) {
+            self.color.insert(w, Color::WHITE);
+        }
+    }
+
+    fn tw_eliminate(&mut self, u: usize) {
+        let ngbh_u = self.ngbh.get(&u).unwrap().clone();
+        for x in &ngbh_u {
+            for y in &ngbh_u {
+                if x != y {
+                    self.add_edge(*x, *y);
+                }
+            }
+        }
+        self.delete_node(u);
     }
 }
 
@@ -127,7 +174,7 @@ pub fn degen_solver(graph: Graph, mut order: VecDeque<usize>, depth: usize) -> V
         let first_round: bool = true;
 
         for w in test_set {
-            let mut graph_w = Graph { ngbh: graph.ngbh.clone() };
+            let mut graph_w = Graph { ngbh: graph.ngbh.clone(), color: graph.color.clone() };
             for x in graph.neighborhood(w) {
                 graph_w.delete_node(x);
             }
@@ -175,3 +222,43 @@ pub fn max_sat_solver(graph: Graph) -> Vec<bool> {
 
     return ret_value;
 }
+
+//pub fn greedy_tree_dec(input_graph: &Graph) -> TreeDec {
+//    let mut graph = Graph {
+//        nnodes: input_graph.nnodes,
+//        edges: input_graph.edges.clone(),
+//        adj_list: input_graph.adj_list.clone(),
+//    };
+//
+//    let bags: HashMap<usize, Vec<usize>> = HashMap::new();
+//    let tree_adj = HashMap<usize, Vec<usize>> = HashMap::new();
+//
+//    // first: finding order
+//    let order: Vec<usize> = Vec::new();
+//
+//    let mut ub = 0;
+//    while graph.nnodes > 0 {
+//        if let Some(v) = graph
+//            .vertices()
+//            .into_iter()
+//            .min_by(|v, u| graph.degree(*v).cmp(&graph.degree(*u)))
+//        {
+//            ub = max(ub, graph.degree(v));
+//
+//            graph.tw_eliminate(v);
+//            order.push(v);
+//        }
+//    }
+//
+//    let mut graph2 = Graph {
+//        nnodes: input_graph.nnodes,
+//        edges: input_graph.edges.clone(),
+//        adj_list: input_graph.adj_list.clone(),
+//    };
+//
+//    for v in order {
+//
+//    }
+//
+//    return ub;
+//}

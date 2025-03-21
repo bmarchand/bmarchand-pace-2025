@@ -1,0 +1,150 @@
+../PACE2025-instances/ds/exact/exact_001.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_002.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_003.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_004.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_005.gr
+max degree: 34
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_006.gr
+max degree: 34
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_007.gr
+max degree: 36
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_008.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_009.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_010.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_011.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_012.gr
+max degree: 42
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_013.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_014.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_015.gr
+max degree: 36
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_016.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_017.gr
+max degree: 5
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_018.gr
+max degree: 5
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_019.gr
+max degree: 5
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_020.gr
+max degree: 5
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_021.gr
+max degree: 7
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_022.gr
+max degree: 5
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_023.gr
+max degree: 6
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_024.gr
+max degree: 32
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_025.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_026.gr
+max degree: 5
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_027.gr
+max degree: 6
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_028.gr
+max degree: 7
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_029.gr
+max degree: 5
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_030.gr
+max degree: 7
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_031.gr
+max degree: 7
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_032.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_033.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_034.gr
+max degree: 7
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_035.gr
+max degree: 36
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_036.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_037.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_038.gr
+max degree: 109
+degeneracy: 39
+../PACE2025-instances/ds/exact/exact_039.gr
+max degree: 155
+degeneracy: 56
+../PACE2025-instances/ds/exact/exact_040.gr
+max degree: 1492
+degeneracy: 203
+../PACE2025-instances/ds/exact/exact_041.gr
+max degree: 6
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_042.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_043.gr
+max degree: 6
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_044.gr
+max degree: 7
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_045.gr
+max degree: 7
+degeneracy: 2
+../PACE2025-instances/ds/exact/exact_046.gr
+max degree: 30
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_047.gr
+max degree: 34
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_048.gr
+max degree: 34
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_049.gr
+max degree: 34
+degeneracy: 3
+../PACE2025-instances/ds/exact/exact_050.gr
+max degree: 30
+degeneracy: 3

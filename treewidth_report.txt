@@ -1,0 +1,100 @@
+../PACE2025-instances/ds/exact/exact_001.gr
+treewidth: below 207
+../PACE2025-instances/ds/exact/exact_002.gr
+treewidth: below 211
+../PACE2025-instances/ds/exact/exact_003.gr
+treewidth: below 212
+../PACE2025-instances/ds/exact/exact_004.gr
+treewidth: below 206
+../PACE2025-instances/ds/exact/exact_005.gr
+treewidth: below 204
+../PACE2025-instances/ds/exact/exact_006.gr
+treewidth: below 210
+../PACE2025-instances/ds/exact/exact_007.gr
+treewidth: below 205
+../PACE2025-instances/ds/exact/exact_008.gr
+treewidth: below 203
+../PACE2025-instances/ds/exact/exact_009.gr
+treewidth: below 211
+../PACE2025-instances/ds/exact/exact_010.gr
+treewidth: below 209
+../PACE2025-instances/ds/exact/exact_011.gr
+treewidth: below 155
+../PACE2025-instances/ds/exact/exact_012.gr
+treewidth: below 155
+../PACE2025-instances/ds/exact/exact_013.gr
+treewidth: below 211
+../PACE2025-instances/ds/exact/exact_014.gr
+treewidth: below 151
+../PACE2025-instances/ds/exact/exact_015.gr
+treewidth: below 162
+../PACE2025-instances/ds/exact/exact_016.gr
+treewidth: below 154
+../PACE2025-instances/ds/exact/exact_017.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_018.gr
+treewidth: below 20
+../PACE2025-instances/ds/exact/exact_019.gr
+treewidth: below 20
+../PACE2025-instances/ds/exact/exact_020.gr
+treewidth: below 11
+../PACE2025-instances/ds/exact/exact_021.gr
+treewidth: below 12
+../PACE2025-instances/ds/exact/exact_022.gr
+treewidth: below 11
+../PACE2025-instances/ds/exact/exact_023.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_024.gr
+treewidth: below 203
+../PACE2025-instances/ds/exact/exact_025.gr
+treewidth: below 17
+../PACE2025-instances/ds/exact/exact_026.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_027.gr
+treewidth: below 11
+../PACE2025-instances/ds/exact/exact_028.gr
+treewidth: below 10
+../PACE2025-instances/ds/exact/exact_029.gr
+treewidth: below 12
+../PACE2025-instances/ds/exact/exact_030.gr
+treewidth: below 10
+../PACE2025-instances/ds/exact/exact_031.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_032.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_033.gr
+treewidth timeout
+../PACE2025-instances/ds/exact/exact_034.gr
+treewidth: below 13
+../PACE2025-instances/ds/exact/exact_035.gr
+treewidth: below 210
+../PACE2025-instances/ds/exact/exact_036.gr
+treewidth: below 14
+../PACE2025-instances/ds/exact/exact_037.gr
+treewidth: below 23
+../PACE2025-instances/ds/exact/exact_038.gr
+treewidth timeout
+../PACE2025-instances/ds/exact/exact_039.gr
+treewidth timeout
+../PACE2025-instances/ds/exact/exact_040.gr
+treewidth timeout
+../PACE2025-instances/ds/exact/exact_041.gr
+treewidth: below 9
+../PACE2025-instances/ds/exact/exact_042.gr
+treewidth: below 12
+../PACE2025-instances/ds/exact/exact_043.gr
+treewidth: below 6
+../PACE2025-instances/ds/exact/exact_044.gr
+treewidth: below 9
+../PACE2025-instances/ds/exact/exact_045.gr
+treewidth: below 11
+../PACE2025-instances/ds/exact/exact_046.gr
+treewidth: below 211
+../PACE2025-instances/ds/exact/exact_047.gr
+treewidth: below 215
+../PACE2025-instances/ds/exact/exact_048.gr
+treewidth: below 206
+../PACE2025-instances/ds/exact/exact_049.gr
+treewidth: below 211
+../PACE2025-instances/ds/exact/exact_050.gr
+treewidth: below 209
