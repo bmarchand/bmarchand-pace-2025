@@ -1,30 +1,59 @@
+use std::convert::TryFrom;
+use std::fs::{File, OpenOptions};
+use std::io;
+use std::io::{stdin, stdout, BufReader};
+use std::path::PathBuf;
 use pace_2025_solver::*;
-//use rsmaxsat::solver::MaxSATSolver;
 
 fn main() {
+//    let opt = Opt::from_args();
+//
+//    let instance: Instance  = match opt.input {
+//        Some(path) => {
+//            let file = File::open(path)?;
+//            let reader = PaceReader(BufReader::new(file));
+//            Instance::try_from(reader)?
+//        }
+//        None => {
+//            let stdin = stdin();
+//            let reader = PaceReader(stdin.lock());
+//            Instance::try_from(reader)?
+//        }
+//    };
+//
+//    let file = match opt.output {
+//        Some(path) => Some(OpenOptions::new().write(true).create(true).open(path)?),
+//        None => None,
+//    };
+//
     let graph: Graph = parse_graph();
+    println!("{:?}", graph.ngbh);
 
-//    let (order, degeneracy) = degeneracy(Graph { ngbh: graph.ngbh.clone()});
-//    println!("degeneracy {:?}", degeneracy);
-//
-//    let ds = degen_solver(graph, order,0);
-//
-//    println!("min DS size: {:?}, DS: {:?}", ds.len(), ds);
+    let mut instance: Instance = initialize_instance(graph);
+    println!("{:?}", instance);
 
-    let sat_solution = max_sat_solver(graph); 
-//
-//    // counting true.
-    let mut n: usize = 0;
-
-    for b in &sat_solution {
-        if *b {
-            n += 1;
+    // applying degree1 rule
+    loop {
+        let b: bool = instance.degree1_rule();
+        if !b {
+            break;
         }
     }
-    println!("{:?}", n);
-//    for k in 1..=sat_solution.len() {
-//        if sat_solution[k-1] {
-//            println!("{:?}",k);
+
+    println!("{:?}", instance);
+
+//    let td = heuristic_td(instance.graph);
+//
+//    instance.reduce_protrusions(td);
+//
+//    instance.sat_solver();
+
+//    match file {
+//        Some(file) => PaceWriter::new(&td, &graph, file).output(),
+//        None => {
+//            let writer = stdout();
+//            PaceWriter::new(&td, &graph, writer).output()
 //        }
 //    }
 }
+

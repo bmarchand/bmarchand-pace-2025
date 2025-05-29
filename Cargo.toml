@@ -2,6 +2,3 @@
 name = "pace_2025_solver"
 version = "0.1.0"
 edition = "2021"
-
-[dependencies]
-rsmaxsat = "0.1.1"
