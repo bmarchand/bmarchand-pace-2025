@@ -20,12 +20,12 @@ fn main() {
 
     let mut solution = treewidth_solver_own_graph_format(&instance);
 
-    println!("{:?}", solution.len());
 
     for u in &instance.suppressed_solution_vertices {
         solution.push(*u);
     }
-
+    
+    println!("{:?}", solution.len());
     for u in solution {
         println!("{:?}", u);
     }
